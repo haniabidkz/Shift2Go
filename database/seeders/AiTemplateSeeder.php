@@ -1,0 +1,238 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Template;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class AiTemplateSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $template = [
+            [
+                'template_name'=>'note',
+                'prompt'=>"generate description '##task##' in ##name## inform to the employee what work he have to do",
+                'module'=>'rota',
+                'field_json'=>'{"field":[{"label":"Role detail","placeholder":"e.g. rotago","field_type":"text_box","field_name":"name"},{"label":"work detail","placeholder":"e.g.","field_type":"textarea","field_name":"task"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'message',
+                'prompt'=>"Generate a comma-separated string of common leave reasons that employees may provide to their employers. Include both personal and professional reasons for taking leave, such only '##type##'. Aim to generate a diverse range of leave reasons that can be used in different situations. Please provide a comprehensive and varied list of leave reasons that can help employers understand and accommodate their employees' needs.",
+                'module'=>'leave',
+                'field_json'=>'{"field":[{"label":"Leave Type","placeholder":"e.g.illness, family emergencies,vacation","field_type":"text_box","field_name":"type"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'remark',
+                'prompt'=>"suppose you are employee ,today had complate '##task## ' in '##name##' project generate key pointing  note for that.",
+                'module'=>'timesheet',
+                'field_json'=>'{"field":[{"label":"Rota detail","placeholder":"e.g. rotago","field_type":"text_box","field_name":"name"},{"label":"Role detail","placeholder":"e.g.","field_type":"textarea","field_name":"task"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'message',
+                'prompt'=>"suppose you are employee ,today had complate '##task## ' in '##name##' project generate key pointing  note for that.",
+                'module'=>'embargo',
+                'field_json'=>'{"field":[{"label":"Embargo detail","placeholder":"e.g. rotago","field_type":"text_box","field_name":"name"},{"label":"Task detail","placeholder":"e.g.","field_type":"textarea","field_name":"task"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'response_message',
+                'prompt'=>"suppose you are manager,you need replay only body content  of leave that leave resoan is 'description' you ##status## the leave becuase of ##resoan##",
+                'module'=>'leave request',
+                'field_json'=>'{"field":[{"label":"Leave Resoan","placeholder":"e.g. family function need to attend","field_type":"textarea","field_name":"description"},{"label":"Your answere status","placeholder":"e.g. disapprove / approve ","field_type":"text_box","field_name":"status"},{"label":"Note(resoan for approve or disapprove)","placeholder":"e.g. he handle a client and it nessary to attend this client daily","field_type":"textarea","field_name":"name"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'name',
+                'prompt'=>"generate short and valuable note for availability title '##name##'",
+                'module'=>'availability',
+                'field_json'=>'{"field":[{"label":"Availability Name","placeholder":"e.g. product return condition ","field_type":"text_box","field_name":"name"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'contract_name',
+                'prompt'=>"generate contract subject for this contract description ##name##",
+                'module'=>'contract',
+                'field_json'=>'{"field":[{"label":"Contract Description","placeholder":"e.g.","field_type":"textarea","field_name":"name"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'subject',
+                'prompt'=>"generate contract subject for this contract description ##subject##",
+                'module'=>'contract',
+                'field_json'=>'{"field":[{"label":"Proposal Description","placeholder":"e.g.Terms and Conditions","field_type":"textarea","field_name":"description"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'notes',
+                'prompt'=>"generate contract description for this contract subject ##description##",
+                'module'=>'contract',
+                'field_json'=>'{"field":[{"label":"Contract Subject","placeholder":"e.g.Legal Protection,Terms and Conditions","field_type":"textarea","field_name":"subject"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'contract_description',
+                'prompt'=>"generate contract brief description for title '##name##' and cover all point that sutiable to contract title",
+                'module'=>'contracts',
+                'field_json'=>'{"field":[{"label":"Contract Name","placeholder":"e.g. product return condition ","field_type":"text_box","field_name":"name"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'comments',
+                'prompt'=>"generate short and valuable comment for contract title '##name##' and focus on this ##decsription##",
+                'module'=>'contracts',
+                'field_json'=>'{"field":[{"label":"Contract Name","placeholder":"e.g. product return condition ","field_type":"text_box","field_name":"name"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'notes',
+                'prompt'=>"generate short and valuable comment for contract title '##name##' and focus on this ##decsription##",
+                'module'=>'contracts',
+                'field_json'=>'{"field":[{"label":"Contract Name","placeholder":"e.g. product return condition ","field_type":"text_box","field_name":"name"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'title',
+                'prompt'=>"Generate a list of Zoom meeting topics for ##description## metting. The purpose of the meeting is to  ##description##. Structure the topics to ensure a productive discussion.",
+                'module'=>'zoom meeting',
+                'field_json'=>'{"field":[{"label":"Meeting description ","placeholder":"e.g.Remote Collaboration","field_type":"textarea","field_name":"description"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'content',
+                'prompt'=>"Generate a meeting notification message for an ##topic## meeting. Include the date, time, location, and a brief agenda with three key discussion points.",
+                'module'=>'notification template',
+                'field_json'=>'{"field":[{"label":"Notification Message","placeholder":"e.g.brief explanation of the purpose or background of the notification","field_type":"textarea","field_name":"topic"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'name',
+                'prompt'=>"please suggest subscription plan  name  for this  :  ##description##  for my business",
+                'module'=>'plan',
+                'field_json'=>'{"field":[{"label":"What is your plan about?","placeholder":"e.g. Describe your plan details ","field_type":"textarea","field_name":"description"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'description',
+                'prompt'=>"please suggest subscription plan  description  for this  :  ##title##:  for my business",
+                'module'=>'plan',
+                'field_json'=>'{"field":[{"label":"What is your plan title?","placeholder":"e.g. Pro Resller,Exclusive Access","field_type":"text_box","field_name":"title"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'name',
+                'prompt'=>"give 10 catchy only name of Offer or discount Coupon for : ##keywords##",
+                'module'=>'coupon',
+                'field_json'=>'{"field":[{"label":"Seed words","placeholder":"e.g.coupon will provide you with a discount on your selected plan","field_type":"text_box","field_name":"keywords"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'meta_keyword',
+                'prompt'=>"Write SEO meta title for:\n\n ##description## \n\nWebsite name is:\n ##title## \n\nSeed words:\n ##keywords## \n\n",
+                'module'=>'seo',
+                'field_json'=>'{"field":[{"label":"Website Name","placeholder":"e.g. Amazon, Google","field_type":"text_box","field_name":"title"},{"label":"Website Description","placeholder":"e.g. Describe what your website or business do","field_type":"textarea","field_name":"description"},{"label":"Keywords","placeholder":"e.g.  cloud services, databases","field_type":"text_box","field_name":"keywords"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'meta_description',
+                'prompt'=>"Write SEO meta description for:\n\n ##description## \n\nWebsite name is:\n ##title## \n\nSeed words:\n ##keywords## \n\n",
+                'module'=>'seo',
+                'field_json'=>'{"field":[{"label":"Website Name","placeholder":"e.g. Amazon, Google","field_type":"text_box","field_name":"title"},{"label":"Website Description","placeholder":"e.g. Describe what your website or business do","field_type":"textarea","field_name":"description"},{"label":"Keywords","placeholder":"e.g.  cloud services, databases","field_type":"text_box","field_name":"keywords"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'cookie_title',
+                'prompt'=>"please suggest me cookie title for this ##description## website which i can use in my website cookie",
+                'module'=>'cookie',
+                'field_json'=>'{"field":[{"label":"Website name or info","placeholder":"e.g. example website ","field_type":"textarea","field_name":"title"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'cookie_description',
+                'prompt'=>"please suggest me  Cookie description for this cookie title ##title##  which i can use in my website cookie",
+                'module'=>'cookie',
+                'field_json'=>'{"field":[{"label":"Cookie Title ","placeholder":"e.g. example website ","field_type":"text_box","field_name":"title"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'strictly_cookie_title',
+                'prompt'=>"please suggest me only Strictly Cookie Title for this ##description## website which i can use in my website cookie",
+                'module'=>'cookie',
+                'field_json'=>'{"field":[{"label":"Website name or info","placeholder":"e.g. example website ","field_type":"textarea","field_name":"title"}]}',
+                'is_tone'=>'0',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'strictly_cookie_description',
+                'prompt'=>"please suggest me Strictly Cookie description for this Strictly cookie title ##title##  which i can use in my website cookie",
+                'module'=>'cookie',
+                'field_json'=>'{"field":[{"label":"Strictly Cookie Title ","placeholder":"e.g. example website ","field_type":"text_box","field_name":"title"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+            [
+                'template_name'=>'contact_us_description',
+                'prompt'=>"I need assistance in crafting compelling content for my ##web_name## website's 'Contact Us' page of my website. The page should provide relevant information to users, encourage them to reach out for inquiries, support, and feedback, and reflect the unique value proposition of my business.",
+                'module'=>'cookie',
+                'field_json'=>'{"field":[{"label":"Websit Name","placeholder":"e.g. example website ","field_type":"text_box","field_name":"web_name"}]}',
+                'is_tone'=>'1',
+                "created_at" => date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),
+            ],
+        ];
+        Template::insert($template);
+    }
+}

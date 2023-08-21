@@ -1,0 +1,1 @@
+<?php /**PATH F:\Laragon\www\shift2go\resources\views/partision/sidesetting.blade.php ENDPATH**/ ?>

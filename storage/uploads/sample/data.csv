@@ -1,0 +1,15 @@
+IP,Date,Time,Accepted cookies,Device type,Browser language,Browser name,OS Name,Country,Region,RegionName,City,Zipcode,Lat,Lon
+2400:adcc:1105:6900:3838:9ccc:c29a:4794,2023-07-06,10:11:12 UTC,["necessary"],desktop,en,Opera,OS X,Pakistan,SD,Sindh,Karachi,,24.8553,67.0261
+2400:adcc:1105:6900:3838:9ccc:c29a:4794,2023-07-06,10:15:13 UTC,["necessary"],desktop,en,Opera,OS X,Pakistan,SD,Sindh,Karachi,,24.8553,67.0261
+2405:6e00:ca1:2300:f0dc:4041:aa24:2396,2023-07-10,01:26:40 UTC,["necessary"],desktop,en,Chrome,Windows,Australia,SA,South Australia,Adelaide,5000,-34.9281,138.5999
+103.163.254.24,2023-07-25,18:40:30 UTC,["necessary"],desktop,en,Chrome,Windows,Pakistan,PB,Punjab,Rawalpindi,46000,33.6054,73.0354
+103.163.254.13,2023-08-02,00:58:26 UTC,["necessary"],desktop,en,Chrome,Windows,Pakistan,PB,Punjab,Rawalpindi,46000,33.6054,73.0354
+2400:adcc:1105:6900:8d8c:7c18:575f:9a69,2023-08-02,12:25:02 UTC,["necessary"],desktop,en,Opera,OS X,Pakistan,SD,Sindh,Karachi,,24.8553,67.0261
+113.203.200.129,2023-08-02,14:52:29 UTC,["necessary"],desktop,en,Edge,Windows,Pakistan,SD,Sindh,Karachi,74200,24.8591,66.9983
+103.163.254.10,2023-08-03,00:46:19 UTC,["necessary"],desktop,en,Chrome,Windows,Pakistan,PB,Punjab,Rawalpindi,46000,33.6054,73.0354
+103.163.254.12,2023-08-03,18:18:16 UTC,["necessary"],desktop,en,Chrome,Windows,Pakistan,PB,Punjab,Rawalpindi,46000,33.6054,73.0354
+203.51.31.154,2023-08-03,18:33:39 UTC,["necessary"],desktop,en,Chrome,Windows,Australia,SA,South Australia,Adelaide,5000,-34.9281,138.5999
+103.163.254.17,2023-08-04,04:45:21 UTC,["necessary"],desktop,en,Chrome,Windows,Pakistan,PB,Punjab,Rawalpindi,46000,33.6054,73.0354
+2400:adcc:1105:6900:15dd:ff2f:8e66:c5be,2023-08-10,14:28:51 UTC,["necessary"],desktop,en,Opera,OS X,Pakistan,SD,Sindh,Karachi,,24.8553,67.0261
+203.51.31.154,2023-08-10,17:20:06 UTC,["necessary"],desktop,en,Chrome,Windows,Australia,SA,South Australia,Adelaide,5000,-34.9281,138.5999
+114.122.43.24,2023-08-15,00:41:43 UTC,["necessary"],desktop,id,Chrome,Windows,Indonesia,SU,North Sumatra,Medan,,3.5847,98.6629
